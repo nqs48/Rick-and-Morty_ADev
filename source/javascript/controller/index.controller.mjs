@@ -9,6 +9,8 @@ import { IndexView } from "../view/index.view.mjs";
 // Models
 import { UserModel } from "../model/user.model.mjs";
 
+import {CharacterModel} from '../model/character.model.mjs'
+
 // Services
 import { RickAndMortyService } from "../model/services/rick-and-morty.service.mjs";
 
@@ -27,7 +29,9 @@ class IndexController {
 
     async init() {
         const data = new RickAndMortyService(this.#privateRickAndMortyURL);
-        this.#privateView.init(this.#privateUser.toString(), await data.getCharacters());
+        const characterList = await data.setModel();
+        
+        this.#privateView.init(characterList);
     }
 }
 
