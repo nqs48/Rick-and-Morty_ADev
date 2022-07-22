@@ -31,7 +31,7 @@ export class IndexView {
 
         data.forEach(c =>{
           const anchor= this.#privateCreateAnchor();
-          anchor.href = "/source/javascript/view/details.html";
+          anchor.href = "/details.html";
           // anchor.target="_blank";
           
           const button = this.#privateCreateButton();
