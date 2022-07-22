@@ -35,7 +35,7 @@ Responsive design of single page aplication.
 
 ### Evnt new window
 
-Event in each button to react to the **click** and direct to another page with information.
+Event in each button to react to the **click** and redirect to another page with information.
 
 ![image](https://res.cloudinary.com/adev48/image/upload/v1658513573/Deployments/Rick%20and%20Morty-app/events_contol_anoiof.png)
 
@@ -55,10 +55,10 @@ Detail of each character, making use of **Local Storage** to save the informatio
 
 This section contains the platforms that were used for the project.
 
-* [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
 * [Git](https://git-scm.com/)
+* [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
 * [Local Storage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage)
-* [Rick and Morty API](https://rick-n-morty-adev.netlify.app/index.html)
+* [Rick and Morty API](https://rickandmortyapi.com/)
 * [App-Netlify](https://app.netlify.com/teams/nqs48/overview)
 
 
