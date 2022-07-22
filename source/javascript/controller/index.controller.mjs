@@ -26,11 +26,10 @@ class IndexController {
         this.#privateUser.Lastname = "Lasso";
         this.#privateView = new IndexView();
     }
-
+ 
     async init() {
         const data = new RickAndMortyService(this.#privateRickAndMortyURL);
         const characterList = await data.setModel();
-        
         this.#privateView.init(characterList);
     }
 }

@@ -8,8 +8,12 @@ export class IndexView {
         this.#privateBody = document.querySelector('body');
     }
 
+    /**
+     * 
+     * @param {CharacterModel[]} data 
+     */
     init(data) {
-        this.#privateBody.className = "body-styles";
+        this.#privateBody.className = "body_index";
         const containerHeader = this.#privateCreateContainer();
         containerHeader.className = "header_container";
 
@@ -24,12 +28,19 @@ export class IndexView {
         const container= this.#privateCreateContainer();
         container.className = "main_container";
 
-      
 
         data.forEach(c =>{
+          const anchor= this.#privateCreateAnchor();
+          anchor.href = "/source/javascript/view/details.html";
+          // anchor.target="_blank";
+          
           const button = this.#privateCreateButton();
           button.className = "button_container";
-          button.addEventListener('click', () => console.log(c.Name) )
+          button.addEventListener('click', () => {
+            localStorage.setItem("character", JSON.stringify(`${c.Name},${c.Status},${c.Species},${c.Image},${c.Gender}`));
+            // window.open("/source/javascript/view/details.html");
+            console.log(c)
+          })
 
           const paragraph = this.#privateCreateParagraph();
           const img = document.createElement('img'); 
@@ -37,14 +48,12 @@ export class IndexView {
           img.src = c.Image;
           paragraph.textContent = c.Name;
           button.append(img, paragraph);
-          container.append(button)
+          anchor.append(button);
+          container.append(anchor);
           
         })
         this.#privateBody.append(containerHeader,container);
         
-        // paragraph.innerHTML = `Hello World!!! ${name}`;
-        // this.#privateBody.append(paragraph);
-        // console.log(data.results);
     }
 
     #privateCreateParagraph() {
@@ -63,4 +72,15 @@ export class IndexView {
         return document.createElement('button');
     }
 
+    #privateCreateAnchor() {
+        return document.createElement('a');
+    }
+
+    
+
 }
+
+const guardarDB = (lista) => {
+  localStorage.setItem("gamers", JSON.stringify(lista));
+};
+

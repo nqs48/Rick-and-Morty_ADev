@@ -1,9 +1,16 @@
-body{
+.body_index{
+  height:100%;
+  overflow: scroll;
   display: flex;
   align-items: center;
   flex-direction: column;
   background-image: radial-gradient(circle at 44.39% 114.07%, #ff778f 0, #ff7c7e 3.33%, #ff816e 6.67%, #ff885f 10%, #ff8f50 13.33%, #ff9643 16.67%, #ff9e36 20%, #f7a52a 23.33%, #eaab1f 26.67%, #dbb218 30%, #cbb717 33.33%, #babd1d 36.67%, #a9c127 40%, #96c533 43.33%, #81c941 46.67%, #6acc50 50%, #4ccf60 53.33%, #16d170 56.67%, #00d381 60%, #00d493 63.33%, #00d5a5 66.67%, #00d6b8 70%, #00d6ca 73.33%, #00d6db 76.67%, #00d6ed 80%, #00d5fd 83.33%, #00d3ff 86.67%, #00d2ff 90%, #00cfff 93.33%, #00cdff 96.67%, #00c9ff 100%);
 }
+
+.body_details{
+  height:100vh;
+}
+
 
 .header_container{
   display: flex;
@@ -44,3 +51,24 @@ body{
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.main_container_details{
+  height: 20%;
+}
+
+
+.paragraph{
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff885f;
+  line-height: 6px;
+  
+}
+
+.paragraph_name{
+  font-size: 22px;
+  font-weight: bold;
+  color: #00c9ff ;
+  line-height: normal;
+}
+
