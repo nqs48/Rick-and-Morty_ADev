@@ -27,7 +27,7 @@ export class DetailsView {
     container.classList = ("main_container", "main_container_details");
 
     const anchor = this.#privateCreateAnchor();
-    anchor.href = "/source/index.html";
+    anchor.href = "/index.html";
     
     const button = this.#privateCreateButton();
     button.className = "button_container";
